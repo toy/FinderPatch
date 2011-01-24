@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		B2FE5FD212ED784400D1B68F /* FinderPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FD112ED784400D1B68F /* FinderPatch.m */; };
+		B2FE5FF412ED78E500D1B68F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */; };
+		B2FE601E12ED7A0D00D1B68F /* FinderLabelPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,12 @@
 		32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* FinderPatch.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderPatch.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2FE5FD012ED784400D1B68F /* FinderPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch.h; sourceTree = "<group>"; };
+		B2FE5FD112ED784400D1B68F /* FinderPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderPatch.m; sourceTree = "<group>"; };
+		B2FE5FF212ED78E500D1B68F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		B2FE601C12ED7A0D00D1B68F /* FinderLabelPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderLabelPatch.h; sourceTree = "<group>"; };
+		B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderLabelPatch.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +73,10 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B2FE5FD012ED784400D1B68F /* FinderPatch.h */,
+				B2FE5FD112ED784400D1B68F /* FinderPatch.m */,
+				B2FE601C12ED7A0D00D1B68F /* FinderLabelPatch.h */,
+				B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -97,9 +110,19 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B2FE5FF112ED78E500D1B68F /* NSArray+Additions */,
 				32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B2FE5FF112ED78E500D1B68F /* NSArray+Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE5FF212ED78E500D1B68F /* NSArray+Additions.h */,
+				B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */,
+			);
+			path = "NSArray+Additions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FE5FD212ED784400D1B68F /* FinderPatch.m in Sources */,
+				B2FE5FF412ED78E500D1B68F /* NSArray+Additions.m in Sources */,
+				B2FE601E12ED7A0D00D1B68F /* FinderLabelPatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
