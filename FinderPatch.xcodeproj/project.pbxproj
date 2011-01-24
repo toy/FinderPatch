@@ -264,6 +264,7 @@
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
+				B2FE654812ED9AB300D1B68F /* ShellScript */,
 				B2FE5FBB12ED778700D1B68F /* ShellScript */,
 			);
 			buildRules = (
@@ -316,6 +317,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/osascript;
 			shellScript = "tell application \"Finder\" to quit\ntell application \"Console\" to activate\ndo shell script \"open /System/Library/CoreServices/Finder.app\"";
+		};
+		B2FE654812ED9AB300D1B68F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ln -nfs \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" ~/Library/Application\\ Support/SIMBL/Plugins/FinderPatch.bundle";
 		};
 /* End PBXShellScriptBuildPhase section */
 
