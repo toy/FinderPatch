@@ -1,0 +1,4 @@
+*Test.*
+*.xcodeproj/
+*.plist
+*.lproj

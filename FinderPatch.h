@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSArray+Additions.h"
-//#import "FNGlue.h"
+#import "FNGlue.h"
 
 @interface FinderPatch : NSObject
 
