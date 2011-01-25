@@ -261,11 +261,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "FinderPatch" */;
 			buildPhases = (
-				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
-				B2FE654812ED9AB300D1B68F /* ShellScript */,
-				B2FE5FBB12ED778700D1B68F /* ShellScript */,
+				B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */,
+				B2FE5FBB12ED778700D1B68F /* Restart Finder */,
 			);
 			buildRules = (
 			);
@@ -294,42 +293,34 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		8D5B49AF048680CD000E48DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		B2FE5FBB12ED778700D1B68F /* ShellScript */ = {
+		B2FE5FBB12ED778700D1B68F /* Restart Finder */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Restart Finder";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/osascript;
 			shellScript = "tell application \"Finder\" to quit\ntell application \"Console\" to activate\ndo shell script \"open /System/Library/CoreServices/Finder.app\"";
 		};
-		B2FE654812ED9AB300D1B68F /* ShellScript */ = {
+		B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Create link to Plugins dir";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "ln -nfs \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" ~/Library/Application\\ Support/SIMBL/Plugins/FinderPatch.bundle";
+			shellScript = "ln -nfs \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" ~/Library/Application\\ Support/SIMBL/Plugins/\"$FULL_PRODUCT_NAME\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
