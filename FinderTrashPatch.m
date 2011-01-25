@@ -190,7 +190,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 								break;
 							}
 							case FPSortTypeList: {
-								[[[[finder FinderWindows] at:1] target] setItem:candidateParentUrl];
+								[[[[finder FinderWindows] first] target] setItem:candidateParentUrl];
 								[[finder select:candidateUrl] send];
 								break;
 							}
