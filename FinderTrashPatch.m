@@ -48,10 +48,6 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	[self performSelectorInBackground:@selector(cmdMoveToTrashAsynchronyously:) withObject:sender];
 }
 
-+ (NSViewController *) frontmostBrowserViewController {
-	return [[[NSClassFromString(@"TGlobalWindowController") globalWindowController] frontmostBrowserWindowControllerIncludingDesktop] browserViewController];
-}
-
 + (void) cmdMoveToTrashAsynchronyously:(id)sender {
 	id pool = [[NSAutoreleasePool alloc] init];
 
@@ -89,15 +85,13 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	NSString *resourceValueKey = [sortByToResourceValueKeys objectForKey:sortBy];
 
 	FNApplication *finder = [FNApplication applicationWithName: @"Finder"];
-	NSArray *selectedRefs = [[finder selection] getListOfType:typeFSRef];
-	NSArray *selectedUrls = [selectedRefs mapUsingSelector:@selector(url)];
+
+	NSArray *selectedUrls = [self getUrls:[finder selection]];
 	NSArray *containers = [[selectedUrls mapUsingSelector:@selector(URLByDeletingLastPathComponent)] uniq];
 	NSMutableArray *candidateUrls = [NSMutableArray arrayWithCapacity:[selectedUrls count]];
 	for (NSURL *container in containers) {
-		ASFileRef *containerRef = [ASFileRef fileRefWithFileURL:container];
-		FNReference *siblingItems = [[[finder items] byIndex:containerRef] items];
-		NSArray *siblingRefs = [siblingItems getListOfType:typeFSRef];
-		NSArray *siblingUrls = [siblingRefs mapUsingSelector:@selector(url)];
+		FNReference *siblingItems = [[[finder items] byIndex:container] items];
+		NSArray *siblingUrls = [self getUrls:siblingItems];
 
 		switch (sortType) {
 			case FPSortTypeColumn:
@@ -224,6 +218,14 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	}
 
 	[pool release];
+}
+
++ (NSViewController *) frontmostBrowserViewController {
+	return [[[NSClassFromString(@"TGlobalWindowController") globalWindowController] frontmostBrowserWindowControllerIncludingDesktop] browserViewController];
+}
+
++ (NSArray *) getUrls:(FNReference *)ref {
+	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
 }
 
 @end

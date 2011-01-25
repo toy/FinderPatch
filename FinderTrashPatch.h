@@ -13,5 +13,6 @@
 + (void) cmdMoveToTrash:(id)sender;
 + (void) cmdMoveToTrashAsynchronyously:(id)sender;
 + (NSViewController *) frontmostBrowserViewController;
++ (NSArray *) getUrls:(FNReference *)ref;
 
 @end
