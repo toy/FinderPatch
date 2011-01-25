@@ -51,6 +51,14 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 + (void) cmdMoveToTrashAsynchronyously:(id)sender {
 	id pool = [[NSAutoreleasePool alloc] init];
 
+	id cmdTarget = [NSApp targetForAction:@selector(cmdMoveToTrash:)];
+	if (cmdTarget == nil) {
+		return;
+	}
+
+	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
+	NSViewController *viewController = [self frontmostBrowserViewController];
+
 	NSDictionary *sortByToResourceValueKeys = [
 																						 NSDictionary dictionaryWithObjectsAndKeys:
 																						 NSURLContentModificationDateKey, @"dateModified",
@@ -67,7 +75,6 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	BOOL calculateFolderSize = NO;
 	NSString *sortBy = nil;
 
-	NSViewController *viewController = [self frontmostBrowserViewController];
 	if ([viewController isKindOfClass:NSClassFromString(@"TColumnViewController")]) {
 		sortType = FPSortTypeColumn;
 		sortBy = [[@"name dateModified dateCreated size kind label" componentsSeparatedByString:@" "] objectAtIndex:[viewController arrangeBy]];
@@ -83,8 +90,6 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 		calculateFolderSize = [viewController calculateAllSizes];
 	}
 	NSString *resourceValueKey = [sortByToResourceValueKeys objectForKey:sortBy];
-
-	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
 	NSArray *selectedUrls = [self getUrls:[finder selection]];
 	NSArray *containers = [[selectedUrls mapUsingSelector:@selector(URLByDeletingLastPathComponent)] uniq];
@@ -162,51 +167,35 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	}
 	[candidateUrls removeObjectsInArray:selectedUrls];
 
-	[NSApp sendAction:@selector(cmdMoveToTrash:) to:nil from:sender];
+	[cmdTarget cmdMoveToTrash:sender];
 
 	int wait;
 	for (wait = 100; wait > 0; wait--) {
 		usleep(10000);
-		if (nil == [[[finder selection] getListOfType:typeFSRef] firstObjectCommonWithArray:selectedRefs]) {
+
+		if (nil == [selectedUrls firstObjectCommonWithArray:[self getUrls:[finder selection]]]) {
 			break;
 		}
 	}
 	if (wait > 0) {
-		usleep(10000);
+//		usleep(10000);
 		if (viewController == [self frontmostBrowserViewController]) {
 			for (NSURL *candidateUrl in candidateUrls) {
 				if ([candidateUrl checkResourceIsReachableAndReturnError:nil]) {
 					NSURL *candidateParentUrl = [candidateUrl URLByDeletingLastPathComponent];
-					FNReference *parentRef = [[finder items] byName:candidateParentUrl];
-					FNReference *unresolvedRef = [[parentRef items] byName:[candidateUrl lastPathComponent]];
-
-//					BOOL targetableInFinder = NO, isDir;
-//					NSURL *resolvedUrl = candidateUrl;
-//					ASFileRef *ref;
-//					if (ref = [ASFileRef fileRefWithFileURL:resolvedUrl]) {
-//						if (ref = [[[[finder items] byIndex:ref] originalItem] getItemOfType:typeFSRef]) {
-//							resolvedUrl = [ref url];
-//						}
-//					}
-//					[[NSFileManager defaultManager] fileExistsAtPath:[resolvedUrl path] isDirectory:&isDir];
-//					if (isDir) {
-//						if (![[NSWorkspace sharedWorkspace] isFilePackageAtPath:[resolvedUrl path]]) {
-//							targetableInFinder = YES;
-//						}
-//					}
 
 					switch (sortType) {
 						case FPSortTypeColumn: {
-							[[finder select:unresolvedRef] send];
+							[[finder select:candidateUrl] send];
 							break;
 						}
 						case FPSortTypeList: {
-							[[[[finder FinderWindows] at:1] target] setItem:parentRef];
-							[[finder select:unresolvedRef] send];
+							[[[[finder FinderWindows] at:1] target] setItem:candidateParentUrl];
+							[[finder select:candidateUrl] send];
 							break;
 						}
 						case FPSortTypeIcon: {
-							[[finder select:unresolvedRef] send];
+							[[finder select:candidateUrl] send];
 							break;
 						}
 					}
