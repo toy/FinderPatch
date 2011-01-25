@@ -36,6 +36,7 @@
 		B2FE64CB12ED8E0D00D1B68F /* unittype.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A312ED8E0D00D1B68F /* unittype.m */; };
 		B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A512ED8E0D00D1B68F /* utils.m */; };
 		B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */; };
+		B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		B2FE64A512ED8E0D00D1B68F /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		B2FE64F312ED8F3500D1B68F /* FinderTrashPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTrashPatch.h; sourceTree = "<group>"; };
 		B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTrashPatch.m; sourceTree = "<group>"; };
+		B2FE66ED12EEF49700D1B68F /* FinderTerminalPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTerminalPatch.h; sourceTree = "<group>"; };
+		B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTerminalPatch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */,
 				B2FE64F312ED8F3500D1B68F /* FinderTrashPatch.h */,
 				B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */,
+				B2FE66ED12EEF49700D1B68F /* FinderTerminalPatch.h */,
+				B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -306,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/osascript;
-			shellScript = "tell application \"Finder\" to quit\ntell application \"Console\" to activate\ndo shell script \"open /System/Library/CoreServices/Finder.app\"";
+			shellScript = "tell application \"Finder\" to quit\ntell application \"Console\" to activate\ndo shell script \"open -b com.apple.finder\"";
 		};
 		B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -357,6 +362,7 @@
 				B2FE64CB12ED8E0D00D1B68F /* unittype.m in Sources */,
 				B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */,
 				B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */,
+				B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
