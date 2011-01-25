@@ -25,7 +25,7 @@
 																														 name:NSWorkspaceDidChangeFileLabelsNotification
 																													 object:nil];
 	[self updateLabels:nil];
-	NSLog(@"FinderLabelPatch loaded");
+	NSLog(@"%@ loaded", [self class]);
 }
 
 + (void) updateLabels:(NSNotification *)notification {
