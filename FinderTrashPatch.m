@@ -169,38 +169,39 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 
 	[cmdTarget cmdMoveToTrash:sender];
 
-	int wait;
-	for (wait = 100; wait > 0; wait--) {
-		usleep(10000);
+	if ([candidateUrls count] > 0) {
+		int wait;
+		for (wait = 100; wait > 0; wait--) {
+			usleep(100000);
 
-		if (nil == [selectedUrls firstObjectCommonWithArray:[self getUrls:[finder selection]]]) {
-			break;
+			if (nil == [selectedUrls firstObjectCommonWithArray:[self getUrls:[finder selection]]]) {
+				break;
+			}
 		}
-	}
-	if (wait > 0) {
-//		usleep(10000);
-		if (viewController == [self frontmostBrowserViewController]) {
-			for (NSURL *candidateUrl in candidateUrls) {
-				if ([candidateUrl checkResourceIsReachableAndReturnError:nil]) {
-					NSURL *candidateParentUrl = [candidateUrl URLByDeletingLastPathComponent];
+		if (wait > 0) {
+			if (viewController == [self frontmostBrowserViewController]) {
+				for (NSURL *candidateUrl in candidateUrls) {
+					if ([candidateUrl checkResourceIsReachableAndReturnError:nil]) {
+						NSURL *candidateParentUrl = [candidateUrl URLByDeletingLastPathComponent];
 
-					switch (sortType) {
-						case FPSortTypeColumn: {
-							[[finder select:candidateUrl] send];
-							break;
+						switch (sortType) {
+							case FPSortTypeColumn: {
+								[[finder select:candidateUrl] send];
+								break;
+							}
+							case FPSortTypeList: {
+								[[[[finder FinderWindows] at:1] target] setItem:candidateParentUrl];
+								[[finder select:candidateUrl] send];
+								break;
+							}
+							case FPSortTypeIcon: {
+								[[finder select:candidateUrl] send];
+								break;
+							}
 						}
-						case FPSortTypeList: {
-							[[[[finder FinderWindows] at:1] target] setItem:candidateParentUrl];
-							[[finder select:candidateUrl] send];
-							break;
-						}
-						case FPSortTypeIcon: {
-							[[finder select:candidateUrl] send];
-							break;
-						}
+
+						break;
 					}
-
-					break;
 				}
 			}
 		}
