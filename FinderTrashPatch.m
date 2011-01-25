@@ -84,7 +84,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	}
 	NSString *resourceValueKey = [sortByToResourceValueKeys objectForKey:sortBy];
 
-	FNApplication *finder = [FNApplication applicationWithName: @"Finder"];
+	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
 	NSArray *selectedUrls = [self getUrls:[finder selection]];
 	NSArray *containers = [[selectedUrls mapUsingSelector:@selector(URLByDeletingLastPathComponent)] uniq];
