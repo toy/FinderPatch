@@ -43,7 +43,23 @@
 		B2FE6B6012EF9E3C00D1B68F /* TRConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5812EF9E3C00D1B68F /* TRConstantGlue.m */; };
 		B2FE6B6112EF9E3C00D1B68F /* TRReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5B12EF9E3C00D1B68F /* TRReferenceGlue.m */; };
 		B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */; };
+		B2FE6C2312F0390B00D1B68F /* FinderTextMatePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */; };
+		B2FE6D2212F0B81100D1B68F /* FinderPatch.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = B2FE6D2012F0B7F600D1B68F /* FinderPatch.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2FE6D2312F0B82F00D1B68F /* Copy Resources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				B2FE6D2212F0B81100D1B68F /* FinderPatch.png in Copy Resources */,
+			);
+			name = "Copy Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -127,6 +143,9 @@
 		B2FE6B5B12EF9E3C00D1B68F /* TRReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRReferenceGlue.m; sourceTree = "<group>"; };
 		B2FE6B5C12EF9E3C00D1B68F /* TRReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRReferenceRendererGlue.h; sourceTree = "<group>"; };
 		B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRReferenceRendererGlue.m; sourceTree = "<group>"; };
+		B2FE6C2112F0390B00D1B68F /* FinderTextMatePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTextMatePatch.h; sourceTree = "<group>"; };
+		B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTextMatePatch.m; sourceTree = "<group>"; };
+		B2FE6D2012F0B7F600D1B68F /* FinderPatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinderPatch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B7048680CD000E48DA /* Info.plist */,
+				B2FE6D2012F0B7F600D1B68F /* FinderPatch.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -181,6 +201,8 @@
 				B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */,
 				B2FE66ED12EEF49700D1B68F /* FinderTerminalPatch.h */,
 				B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */,
+				B2FE6C2112F0390B00D1B68F /* FinderTextMatePatch.h */,
+				B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -316,8 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "FinderPatch" */;
 			buildPhases = (
+				B2FE6D2312F0B82F00D1B68F /* Copy Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
+				B2FE6C6E12F048B500D1B68F /* Unpack gems */,
+				B2FE6CAC12F07C9300D1B68F /* Set icon */,
 				B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */,
 				B2FE5FBB12ED778700D1B68F /* Restart Finder */,
 			);
@@ -377,6 +402,34 @@
 			shellPath = /bin/sh;
 			shellScript = "ln -nfs \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" ~/Library/Application\\ Support/SIMBL/Plugins/\"$FULL_PRODUCT_NAME\"";
 		};
+		B2FE6C6E12F048B500D1B68F /* Unpack gems */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unpack gems";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "VENDOR_DIR=$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/vendor\nif [ -d $VENDOR_DIR ]\nthen\n \techo rm -r $VENDOR_DIR\n\trm -r $VENDOR_DIR\nfi\n/opt/local/bin/gem unpack mate plist --target=$VENDOR_DIR";
+		};
+		B2FE6CAC12F07C9300D1B68F /* Set icon */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set icon";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SET_ICON_SRC=\"$TEMP_DIR/set_icon.m\"\nSET_ICON_BIN=\"$TEMP_DIR/set_icon\"\n\ncat <<-END_TEXT > \"$SET_ICON_SRC\"\n#import <Foundation/Foundation.h>\n#import <AppKit/AppKit.h>\nint main (int argc, const char * argv[]) {\n\tint exitCode = 1;\n\tprintf(\"%d\\n\", argc);\n\tif (argc == 3) {\n\t\tNSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];\n\t\tNSImage *img = [[NSImage alloc] initWithContentsOfFile:[NSString stringWithUTF8String:argv[2]]];\n\t\texitCode = [[NSWorkspace sharedWorkspace] setIcon:img forFile:[NSString stringWithUTF8String:argv[1]] options:0] ? 0 : 1;\n\t\t[pool drain];\n\t} else {\n\t\tfprintf(stderr, \"set_icon file icon_file\\n\");\n\t}\n\treturn exitCode;\n}\nEND_TEXT\n\ngcc -framework Foundation -framework AppKit -o \"$SET_ICON_BIN\" \"$SET_ICON_SRC\"\n\n$SET_ICON_BIN \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" \"$SOURCE_ROOT/FinderPatch.icns\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -419,6 +472,7 @@
 				B2FE6B6012EF9E3C00D1B68F /* TRConstantGlue.m in Sources */,
 				B2FE6B6112EF9E3C00D1B68F /* TRReferenceGlue.m in Sources */,
 				B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */,
+				B2FE6C2312F0390B00D1B68F /* FinderTextMatePatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
