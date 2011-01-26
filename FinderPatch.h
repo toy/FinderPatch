@@ -18,6 +18,7 @@
 
 + (NSMenu *) fileMenu;
 + (NSMenu *) patchMenu;
++ (NSBundle *) thisBundle;
 + (void) insertSeparatorInPatchMenuIfNotEmpty;
 
 @end

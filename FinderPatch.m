@@ -10,6 +10,17 @@
 
 @implementation FinderPatch
 
++ (void) load {
+	if ([self class] == [FinderPatch class]) {
+		NSString *finderPatchIconPath = [[self thisBundle] pathForImageResource:@"FinderPatch"];
+		NSImage *finderPatchIcon = [[NSImage alloc] initByReferencingFile:finderPatchIconPath];
+		[NSApp setApplicationIconImage:finderPatchIcon];
+		[finderPatchIcon release];
+
+		LOG_PATCH_LOADED;
+	}
+}
+
 + (NSMenu *) fileMenu {
 	return [[[NSApp mainMenu] itemWithTitle:@"File"] submenu];
 }
@@ -24,6 +35,10 @@
 	}
 
 	return finderPatchMenu;
+}
+
++ (NSBundle *) thisBundle {
+	return [NSBundle bundleForClass:[self class]];
 }
 
 + (void) insertSeparatorInPatchMenuIfNotEmpty {
