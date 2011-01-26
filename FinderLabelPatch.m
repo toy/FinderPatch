@@ -15,17 +15,17 @@
 	NSUInteger i, _i = [keys count];
 	for (i = 0; i < _i; i++) {
 		NSString *key = [keys objectAtIndex:i];
-		NSMenuItem *item = [[self finderPatchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:key];
-		[item setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask];
-		[item setTarget:self];
-		[item setTag:i];
+		NSMenuItem *setLabelItem = [[self finderPatchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:key];
+		[setLabelItem setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask];
+		[setLabelItem setTarget:self];
+		[setLabelItem setTag:i];
 	}
 	[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
 																												 selector:@selector(updateLabels:)
 																														 name:NSWorkspaceDidChangeFileLabelsNotification
 																													 object:nil];
 	[self updateLabels:nil];
-	NSLog(@"%@ loaded", [self class]);
+	LOG_PATCH_LOADED;
 }
 
 + (void) updateLabels:(NSNotification *)notification {

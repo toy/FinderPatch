@@ -7,8 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NSArray+Additions.h"
 #import "FNGlue.h"
+#import "TRGlue.h"
+#import "NSArray+Additions.h"
+#import "NSMenu+itemWithKeyEquivalent.h"
+
+#define LOG_PATCH_LOADED NSLog(@"%@ loaded", [self class])
 
 @interface FinderPatch : NSObject
 

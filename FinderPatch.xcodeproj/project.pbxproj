@@ -37,6 +37,12 @@
 		B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A512ED8E0D00D1B68F /* utils.m */; };
 		B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */; };
 		B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */; };
+		B2FE6A9A12EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6A9912EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m */; };
+		B2FE6B5E12EF9E3C00D1B68F /* TRApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5412EF9E3C00D1B68F /* TRApplicationGlue.m */; };
+		B2FE6B5F12EF9E3C00D1B68F /* TRCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5612EF9E3C00D1B68F /* TRCommandGlue.m */; };
+		B2FE6B6012EF9E3C00D1B68F /* TRConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5812EF9E3C00D1B68F /* TRConstantGlue.m */; };
+		B2FE6B6112EF9E3C00D1B68F /* TRReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5B12EF9E3C00D1B68F /* TRReferenceGlue.m */; };
+		B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +113,20 @@
 		B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTrashPatch.m; sourceTree = "<group>"; };
 		B2FE66ED12EEF49700D1B68F /* FinderTerminalPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTerminalPatch.h; sourceTree = "<group>"; };
 		B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTerminalPatch.m; sourceTree = "<group>"; };
+		B2FE6A9812EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu+itemWithKeyEquivalent.h"; sourceTree = "<group>"; };
+		B2FE6A9912EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenu+itemWithKeyEquivalent.m"; sourceTree = "<group>"; };
+		B2FE6B5212EF9E3C00D1B68F /* TRAEMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAEMConstants.h; sourceTree = "<group>"; };
+		B2FE6B5312EF9E3C00D1B68F /* TRApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationGlue.h; sourceTree = "<group>"; };
+		B2FE6B5412EF9E3C00D1B68F /* TRApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationGlue.m; sourceTree = "<group>"; };
+		B2FE6B5512EF9E3C00D1B68F /* TRCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCommandGlue.h; sourceTree = "<group>"; };
+		B2FE6B5612EF9E3C00D1B68F /* TRCommandGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCommandGlue.m; sourceTree = "<group>"; };
+		B2FE6B5712EF9E3C00D1B68F /* TRConstantGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRConstantGlue.h; sourceTree = "<group>"; };
+		B2FE6B5812EF9E3C00D1B68F /* TRConstantGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRConstantGlue.m; sourceTree = "<group>"; };
+		B2FE6B5912EF9E3C00D1B68F /* TRGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGlue.h; sourceTree = "<group>"; };
+		B2FE6B5A12EF9E3C00D1B68F /* TRReferenceGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRReferenceGlue.h; sourceTree = "<group>"; };
+		B2FE6B5B12EF9E3C00D1B68F /* TRReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRReferenceGlue.m; sourceTree = "<group>"; };
+		B2FE6B5C12EF9E3C00D1B68F /* TRReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRReferenceRendererGlue.h; sourceTree = "<group>"; };
+		B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRReferenceRendererGlue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,9 +196,11 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B2FE5FF112ED78E500D1B68F /* NSArray+Additions */,
 				B2FE645D12ED8E0C00D1B68F /* Appscript */,
 				B2FE615712ED86C800D1B68F /* FNGlue */,
+				B2FE6B5112EF9E3C00D1B68F /* TRGlue */,
+				B2FE5FF112ED78E500D1B68F /* NSArray+Additions */,
+				B2FE6A9712EF696300D1B68F /* NSMenu+itemWithKeyEquivalent */,
 				32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -257,6 +279,34 @@
 				B2FE64A512ED8E0D00D1B68F /* utils.m */,
 			);
 			path = Appscript;
+			sourceTree = "<group>";
+		};
+		B2FE6A9712EF696300D1B68F /* NSMenu+itemWithKeyEquivalent */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE6A9812EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.h */,
+				B2FE6A9912EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m */,
+			);
+			path = "NSMenu+itemWithKeyEquivalent";
+			sourceTree = "<group>";
+		};
+		B2FE6B5112EF9E3C00D1B68F /* TRGlue */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE6B5212EF9E3C00D1B68F /* TRAEMConstants.h */,
+				B2FE6B5312EF9E3C00D1B68F /* TRApplicationGlue.h */,
+				B2FE6B5412EF9E3C00D1B68F /* TRApplicationGlue.m */,
+				B2FE6B5512EF9E3C00D1B68F /* TRCommandGlue.h */,
+				B2FE6B5612EF9E3C00D1B68F /* TRCommandGlue.m */,
+				B2FE6B5712EF9E3C00D1B68F /* TRConstantGlue.h */,
+				B2FE6B5812EF9E3C00D1B68F /* TRConstantGlue.m */,
+				B2FE6B5912EF9E3C00D1B68F /* TRGlue.h */,
+				B2FE6B5A12EF9E3C00D1B68F /* TRReferenceGlue.h */,
+				B2FE6B5B12EF9E3C00D1B68F /* TRReferenceGlue.m */,
+				B2FE6B5C12EF9E3C00D1B68F /* TRReferenceRendererGlue.h */,
+				B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */,
+			);
+			path = TRGlue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +413,12 @@
 				B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */,
 				B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */,
 				B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */,
+				B2FE6A9A12EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m in Sources */,
+				B2FE6B5E12EF9E3C00D1B68F /* TRApplicationGlue.m in Sources */,
+				B2FE6B5F12EF9E3C00D1B68F /* TRCommandGlue.m in Sources */,
+				B2FE6B6012EF9E3C00D1B68F /* TRConstantGlue.m in Sources */,
+				B2FE6B6112EF9E3C00D1B68F /* TRReferenceGlue.m in Sources */,
+				B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
