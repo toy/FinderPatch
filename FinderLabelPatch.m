@@ -11,11 +11,13 @@
 @implementation FinderLabelPatch
 
 + (void) load {
+	[self insertSeparatorInPatchMenuIfNotEmpty];
+
 	NSArray *keys = [@"n e g p b y r o" componentsSeparatedByString:@" "];
 	NSUInteger i, _i = [keys count];
 	for (i = 0; i < _i; i++) {
 		NSString *key = [keys objectAtIndex:i];
-		NSMenuItem *setLabelItem = [[self finderPatchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:key];
+		NSMenuItem *setLabelItem = [[self patchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:key];
 		[setLabelItem setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask];
 		[setLabelItem setTarget:self];
 		[setLabelItem setTag:i];
@@ -32,7 +34,7 @@
 	NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 	NSArray *names = [workspace fileLabels];
 	NSArray *colors = [workspace fileLabelColors];
-	[[[self finderPatchMenu] itemArray] enumerateObjectsUsingBlock:^(id menuItem, NSUInteger idx, BOOL *stop) {
+	[[[self patchMenu] itemArray] enumerateObjectsUsingBlock:^(id menuItem, NSUInteger idx, BOOL *stop) {
 		if ([menuItem target] == self) {
 			NSUInteger labelId = [menuItem tag];
 			NSString *name = [names objectAtIndex:labelId];

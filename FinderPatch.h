@@ -17,6 +17,7 @@
 @interface FinderPatch : NSObject
 
 + (NSMenu *) fileMenu;
-+ (NSMenu *) finderPatchMenu;
++ (NSMenu *) patchMenu;
++ (void) insertSeparatorInPatchMenuIfNotEmpty;
 
 @end

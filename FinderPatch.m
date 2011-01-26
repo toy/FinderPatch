@@ -14,7 +14,7 @@
 	return [[[NSApp mainMenu] itemWithTitle:@"File"] submenu];
 }
 
-+ (NSMenu *) finderPatchMenu {
++ (NSMenu *) patchMenu {
 	static NSMenu *finderPatchMenu = nil;
 
 	if (!finderPatchMenu) {
@@ -24,6 +24,12 @@
 	}
 
 	return finderPatchMenu;
+}
+
++ (void) insertSeparatorInPatchMenuIfNotEmpty {
+	if ([[self patchMenu] numberOfItems] > 0) {
+		[[self patchMenu] addItem:[NSMenuItem separatorItem]];
+	}
 }
 
 @end

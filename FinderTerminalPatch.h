@@ -8,6 +8,9 @@
 
 #import "FinderPatch.h"
 
-@interface FinderTerminalPatch : NSObject
+@interface FinderTerminalPatch : FinderPatch
+
++ (void) cmdTerminalHere:(id)sender;
++ (void) cmdTerminalHereAsynchronyously:(id)sender;
 
 @end
