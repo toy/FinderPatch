@@ -47,5 +47,20 @@
 	}
 }
 
++ (NSDictionary *) environment {
+	static NSMutableDictionary *env = nil;
+
+	if (env == nil) {
+		NSString *lines = [NSTask stdoutForCommand:[NSArray arrayWithObjects:@"sh", @"-c", @". ~/.bashrc; printenv", nil]];
+		env = [[NSMutableDictionary dictionary] retain];
+		[lines enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
+			NSUInteger equalLocation = [line rangeOfString:@"="].location;
+			[env setObject:[line substringFromIndex:equalLocation + 1] forKey:[line substringToIndex:equalLocation]];
+		}];
+	}
+
+	return [NSDictionary dictionaryWithDictionary:env];
+}
+
 @end
 

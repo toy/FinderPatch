@@ -11,6 +11,7 @@
 #import "TRGlue.h"
 #import "NSArray+Additions.h"
 #import "NSMenu+itemWithKeyEquivalent.h"
+#import "NSTask+Simple.h"
 
 #define LOG_PATCH_LOADED NSLog(@"%@ loaded", [self class])
 
@@ -20,5 +21,6 @@
 + (NSMenu *) patchMenu;
 + (NSBundle *) thisBundle;
 + (void) insertSeparatorInPatchMenuIfNotEmpty;
++ (NSDictionary *) environment;
 
 @end

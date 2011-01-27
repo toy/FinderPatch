@@ -60,7 +60,14 @@
 			}
 		}
 
-		NSTask *task = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/env" arguments:arguments];
+		[arguments addObjectsFromArray:paths];
+
+		NSTask *task = [[[NSTask alloc] init] autorelease];
+		[task setLaunchPath:@"/usr/bin/env"];
+		[task setArguments:arguments];
+		[task setEnvironment:[self environment]];
+		[task launch];
+
 		[task waitUntilExit];
 	}
 

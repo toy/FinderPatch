@@ -45,6 +45,7 @@
 		B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */; };
 		B2FE6C2312F0390B00D1B68F /* FinderTextMatePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */; };
 		B2FE6D2212F0B81100D1B68F /* FinderPatch.png in Copy Resources */ = {isa = PBXBuildFile; fileRef = B2FE6D2012F0B7F600D1B68F /* FinderPatch.png */; };
+		B2FE6D6A12F0FB7200D1B68F /* NSTask+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6D6912F0FB7200D1B68F /* NSTask+Simple.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,6 +147,8 @@
 		B2FE6C2112F0390B00D1B68F /* FinderTextMatePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTextMatePatch.h; sourceTree = "<group>"; };
 		B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTextMatePatch.m; sourceTree = "<group>"; };
 		B2FE6D2012F0B7F600D1B68F /* FinderPatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinderPatch.png; sourceTree = "<group>"; };
+		B2FE6D6812F0FB7200D1B68F /* NSTask+Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTask+Simple.h"; sourceTree = "<group>"; };
+		B2FE6D6912F0FB7200D1B68F /* NSTask+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTask+Simple.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,7 @@
 				B2FE6B5112EF9E3C00D1B68F /* TRGlue */,
 				B2FE5FF112ED78E500D1B68F /* NSArray+Additions */,
 				B2FE6A9712EF696300D1B68F /* NSMenu+itemWithKeyEquivalent */,
+				B2FE6D6712F0FB7200D1B68F /* NSTask+Simple */,
 				32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -329,6 +333,15 @@
 				B2FE6B5D12EF9E3C00D1B68F /* TRReferenceRendererGlue.m */,
 			);
 			path = TRGlue;
+			sourceTree = "<group>";
+		};
+		B2FE6D6712F0FB7200D1B68F /* NSTask+Simple */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE6D6812F0FB7200D1B68F /* NSTask+Simple.h */,
+				B2FE6D6912F0FB7200D1B68F /* NSTask+Simple.m */,
+			);
+			path = "NSTask+Simple";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +486,7 @@
 				B2FE6B6112EF9E3C00D1B68F /* TRReferenceGlue.m in Sources */,
 				B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */,
 				B2FE6C2312F0390B00D1B68F /* FinderTextMatePatch.m in Sources */,
+				B2FE6D6A12F0FB7200D1B68F /* NSTask+Simple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
