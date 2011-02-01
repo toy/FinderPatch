@@ -48,6 +48,16 @@
 		B2FE6D6A12F0FB7200D1B68F /* NSTask+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6D6912F0FB7200D1B68F /* NSTask+Simple.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B20A167012F875860050FD80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B20A166D12F8756D0050FD80 /* Increment build version */;
+			remoteInfo = "Increment build version";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		B2FE6D2312F0B82F00D1B68F /* Copy Resources */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -346,6 +356,22 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		B20A166D12F8756D0050FD80 /* Increment build version */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "rake build:increment";
+			buildConfigurationList = B20A167212F875A40050FD80 /* Build configuration list for PBXLegacyTarget "Increment build version" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/env;
+			dependencies = (
+			);
+			name = "Increment build version";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Increment build version";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		8D5B49AC048680CD000E48DA /* FinderPatch */ = {
 			isa = PBXNativeTarget;
@@ -362,6 +388,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B20A167112F875860050FD80 /* PBXTargetDependency */,
 			);
 			name = FinderPatch;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -382,6 +409,7 @@
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* FinderPatch */,
+				B20A166D12F8756D0050FD80 /* Increment build version */,
 			);
 		};
 /* End PBXProject section */
@@ -399,7 +427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/osascript;
-			shellScript = "tell application \"Finder\" to quit\ntell application \"Console\" to activate\ndo shell script \"open -b com.apple.finder\"";
+			shellScript = "if (system attribute \"NO_RESTART\") is equal to \"\" then\n\ttell application \"Finder\" to quit\n\ttell application \"Console\" to activate\n\tdo shell script \"open -b com.apple.finder\"\nend if\n";
 		};
 		B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -492,6 +520,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B20A167112F875860050FD80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B20A166D12F8756D0050FD80 /* Increment build version */;
+			targetProxy = B20A167012F875860050FD80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1DEB913B08733D840010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -554,6 +590,27 @@
 			};
 			name = Release;
 		};
+		B20A166E12F8756D0050FD80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Increment build version";
+			};
+			name = Debug;
+		};
+		B20A166F12F8756D0050FD80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Increment build version";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -571,6 +628,15 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B20A167212F875A40050FD80 /* Build configuration list for PBXLegacyTarget "Increment build version" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20A166E12F8756D0050FD80 /* Debug */,
+				B20A166F12F8756D0050FD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

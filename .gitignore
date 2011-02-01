@@ -1,3 +1,5 @@
+/pkg/
+
 build/
 *.pbxuser
 *.mode1v3
