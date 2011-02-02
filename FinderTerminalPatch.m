@@ -14,12 +14,9 @@
 	NSString *keyEquivalent = @"t";
 	NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 
-	NSMenuItem *keyEquivalentOwner = [[NSApp mainMenu] itemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
-	if (keyEquivalentOwner) {
-		[keyEquivalentOwner setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
-	}
-
+	[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 	[self insertSeparatorInPatchMenuIfNotEmpty];
+
 	NSMenuItem *terminalHereItem = [[self patchMenu] addItemWithTitle:@"Terminal Here" action:@selector(cmdTerminalHere:) keyEquivalent:keyEquivalent];
 	[terminalHereItem setKeyEquivalentModifierMask:modifierMask];
 	[terminalHereItem setTarget:self];

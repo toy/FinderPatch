@@ -62,5 +62,13 @@
 	return [NSDictionary dictionaryWithDictionary:env];
 }
 
++ (void) shiftItemWithKeyEquivalent:(NSString *)keyEquivalent andModifierMask:(NSUInteger)modifierMask {
+	NSMenuItem *keyEquivalentOwner = [[NSApp mainMenu] itemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
+	if (keyEquivalentOwner) {
+		[keyEquivalentOwner setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
+	}
+
+}
+
 @end
 

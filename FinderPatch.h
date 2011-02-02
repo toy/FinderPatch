@@ -22,5 +22,6 @@
 + (NSBundle *) thisBundle;
 + (void) insertSeparatorInPatchMenuIfNotEmpty;
 + (NSDictionary *) environment;
++ (void) shiftItemWithKeyEquivalent:(NSString *)keyEquivalent andModifierMask:(NSUInteger)modifierMask;
 
 @end

@@ -18,12 +18,9 @@
 		NSString *keyEquivalent = @"m";
 		NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 
-		NSMenuItem *keyEquivalentOwner = [[NSApp mainMenu] itemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
-		if (keyEquivalentOwner) {
-			[keyEquivalentOwner setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
-		}
-
+		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 		[self insertSeparatorInPatchMenuIfNotEmpty];
+
 		NSMenuItem *openInTextMateItem = [[self patchMenu] addItemWithTitle:@"Open in TextMate" action:@selector(cmdOpenInTextMate:) keyEquivalent:keyEquivalent];
 		[openInTextMateItem setKeyEquivalentModifierMask:modifierMask];
 		[openInTextMateItem setTarget:self];
