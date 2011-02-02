@@ -56,8 +56,28 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 		return;
 	}
 
-	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 	NSViewController *viewController = [self frontmostBrowserViewController];
+	if ([NSStringFromClass([viewController class]) isEqualToString:@"TDesktopViewController"]) {
+		[cmdTarget cmdMoveToTrash:sender]; // just move to trash, there is nothing I can do
+	} else {
+		[self selectNextAfterBlock:^() {
+			[cmdTarget cmdMoveToTrash:sender];
+		} viewController:viewController];
+	}
+
+	[pool release];
+}
+
++ (NSViewController *) frontmostBrowserViewController {
+	return [[[NSClassFromString(@"TGlobalWindowController") globalWindowController] frontmostBrowserWindowControllerIncludingDesktop] browserViewController];
+}
+
++ (NSArray *) getUrls:(FNReference *)ref {
+	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
+}
+
++ (void) selectNextAfterBlock:(void (^)())block viewController:(NSViewController *)viewController {
+	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
 	NSDictionary *sortByToResourceValueKeys = [
 																						 NSDictionary dictionaryWithObjectsAndKeys:
@@ -167,7 +187,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	}
 	[candidateUrls removeObjectsInArray:selectedUrls];
 
-	[cmdTarget cmdMoveToTrash:sender];
+	block();
 
 	if ([candidateUrls count] > 0) {
 		int wait;
@@ -206,16 +226,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 			}
 		}
 	}
-
-	[pool release];
 }
 
-+ (NSViewController *) frontmostBrowserViewController {
-	return [[[NSClassFromString(@"TGlobalWindowController") globalWindowController] frontmostBrowserWindowControllerIncludingDesktop] browserViewController];
-}
-
-+ (NSArray *) getUrls:(FNReference *)ref {
-	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
-}
 
 @end
