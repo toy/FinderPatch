@@ -55,7 +55,7 @@ NSComparisonResult NSCompare(id a, id b) {
 			[array addObject:obj];
 		}
 	}
-	return array;
+	return [array autorelease];
 }
 
 - (NSArray *) reverse {
