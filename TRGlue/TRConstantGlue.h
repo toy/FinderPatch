@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "Appscript.h"
+#import "Appscript/Appscript.h"
 
 @interface TRConstant : ASConstant
 + (id)constantWithCode:(OSType)code_;

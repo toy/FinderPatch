@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "Appscript.h"
+#import "Appscript/Appscript.h"
 #import "TRCommandGlue.h"
 #import "TRReferenceRendererGlue.h"
 #define TRApp ((TRReference *)[TRReference referenceWithAppData: nil aemReference: AEMApp])

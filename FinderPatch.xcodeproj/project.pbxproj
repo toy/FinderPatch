@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		B20A18D912F9A21C0050FD80 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A18D412F9A2000050FD80 /* Appscript.framework */; };
+		B20A18DE12F9A23C0050FD80 /* Appscript.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B20A18D412F9A2000050FD80 /* Appscript.framework */; };
+		B20A18FC12F9A5610050FD80 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A18FB12F9A5610050FD80 /* Appscript.framework */; };
 		B2FE5FD212ED784400D1B68F /* FinderPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FD112ED784400D1B68F /* FinderPatch.m */; };
 		B2FE5FF412ED78E500D1B68F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */; };
 		B2FE601E12ED7A0D00D1B68F /* FinderLabelPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */; };
@@ -16,25 +19,6 @@
 		B2FE616612ED86C800D1B68F /* FNConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE615E12ED86C800D1B68F /* FNConstantGlue.m */; };
 		B2FE616712ED86C800D1B68F /* FNReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE616112ED86C800D1B68F /* FNReferenceGlue.m */; };
 		B2FE616812ED86C800D1B68F /* FNReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE616312ED86C800D1B68F /* FNReferenceRendererGlue.m */; };
-		B2FE64A712ED8E0D00D1B68F /* appdata.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE646112ED8E0C00D1B68F /* appdata.m */; };
-		B2FE64A812ED8E0D00D1B68F /* application.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE646312ED8E0C00D1B68F /* application.m */; };
-		B2FE64A912ED8E0D00D1B68F /* base.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE646A12ED8E0C00D1B68F /* base.m */; };
-		B2FE64AA12ED8E0D00D1B68F /* bridgedata.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE646C12ED8E0C00D1B68F /* bridgedata.m */; };
-		B2FE64BB12ED8E0D00D1B68F /* codecs.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE648512ED8E0C00D1B68F /* codecs.m */; };
-		B2FE64BC12ED8E0D00D1B68F /* command.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE648712ED8E0C00D1B68F /* command.m */; };
-		B2FE64BD12ED8E0D00D1B68F /* constant.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE648912ED8E0C00D1B68F /* constant.m */; };
-		B2FE64BF12ED8E0D00D1B68F /* event.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE648D12ED8E0C00D1B68F /* event.m */; };
-		B2FE64C212ED8E0D00D1B68F /* objectrenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649112ED8E0C00D1B68F /* objectrenderer.m */; };
-		B2FE64C312ED8E0D00D1B68F /* parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649312ED8E0C00D1B68F /* parser.m */; };
-		B2FE64C412ED8E0D00D1B68F /* reference.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649512ED8E0C00D1B68F /* reference.m */; };
-		B2FE64C512ED8E0D00D1B68F /* referencerenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649712ED8E0C00D1B68F /* referencerenderer.m */; };
-		B2FE64C612ED8E0D00D1B68F /* sendthreadsafe.c in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649812ED8E0C00D1B68F /* sendthreadsafe.c */; };
-		B2FE64C712ED8E0D00D1B68F /* specifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649B12ED8E0C00D1B68F /* specifier.m */; };
-		B2FE64C812ED8E0D00D1B68F /* terminology.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649D12ED8E0C00D1B68F /* terminology.m */; };
-		B2FE64C912ED8E0D00D1B68F /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE649F12ED8E0D00D1B68F /* test.m */; };
-		B2FE64CA12ED8E0D00D1B68F /* types.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A112ED8E0D00D1B68F /* types.m */; };
-		B2FE64CB12ED8E0D00D1B68F /* unittype.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A312ED8E0D00D1B68F /* unittype.m */; };
-		B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64A512ED8E0D00D1B68F /* utils.m */; };
 		B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */; };
 		B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */; };
 		B2FE6A9A12EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE6A9912EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m */; };
@@ -53,12 +37,43 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B20A166D12F8756D0050FD80 /* Increment build version */;
+			remoteGlobalIDString = B20A166D12F8756D0050FD80;
 			remoteInfo = "Increment build version";
+		};
+		B20A18D312F9A2000050FD80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Appscript;
+		};
+		B20A18D512F9A2000050FD80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FED70860D2E6B63003412D7;
+			remoteInfo = "objc-appscript-test";
+		};
+		B20A18EF12F9A4250050FD80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Appscript;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B20A18E012F9A2530050FD80 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B20A18DE12F9A23C0050FD80 /* Appscript.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2FE6D2312F0B82F00D1B68F /* Copy Resources */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +93,8 @@
 		32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* FinderPatch.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderPatch.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = Appscript/Appscript.xcodeproj; sourceTree = "<group>"; };
+		B20A18FB12F9A5610050FD80 /* Appscript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Appscript.framework; path = Appscript/build/Release_10.5_32_64_GC_embed/Appscript.framework; sourceTree = "<group>"; };
 		B2FE5FD012ED784400D1B68F /* FinderPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch.h; sourceTree = "<group>"; };
 		B2FE5FD112ED784400D1B68F /* FinderPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderPatch.m; sourceTree = "<group>"; };
 		B2FE5FF212ED78E500D1B68F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
@@ -96,46 +113,6 @@
 		B2FE616112ED86C800D1B68F /* FNReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNReferenceGlue.m; sourceTree = "<group>"; };
 		B2FE616212ED86C800D1B68F /* FNReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNReferenceRendererGlue.h; sourceTree = "<group>"; };
 		B2FE616312ED86C800D1B68F /* FNReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNReferenceRendererGlue.m; sourceTree = "<group>"; };
-		B2FE646012ED8E0C00D1B68F /* appdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appdata.h; sourceTree = "<group>"; };
-		B2FE646112ED8E0C00D1B68F /* appdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appdata.m; sourceTree = "<group>"; };
-		B2FE646212ED8E0C00D1B68F /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
-		B2FE646312ED8E0C00D1B68F /* application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = application.m; sourceTree = "<group>"; };
-		B2FE646412ED8E0C00D1B68F /* Appscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appscript.h; sourceTree = "<group>"; };
-		B2FE646812ED8E0C00D1B68F /* Appscript_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appscript_Prefix.pch; sourceTree = "<group>"; };
-		B2FE646912ED8E0C00D1B68F /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
-		B2FE646A12ED8E0C00D1B68F /* base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base.m; sourceTree = "<group>"; };
-		B2FE646B12ED8E0C00D1B68F /* bridgedata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridgedata.h; sourceTree = "<group>"; };
-		B2FE646C12ED8E0C00D1B68F /* bridgedata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bridgedata.m; sourceTree = "<group>"; };
-		B2FE648412ED8E0C00D1B68F /* codecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codecs.h; sourceTree = "<group>"; };
-		B2FE648512ED8E0C00D1B68F /* codecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = codecs.m; sourceTree = "<group>"; };
-		B2FE648612ED8E0C00D1B68F /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command.h; sourceTree = "<group>"; };
-		B2FE648712ED8E0C00D1B68F /* command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = command.m; sourceTree = "<group>"; };
-		B2FE648812ED8E0C00D1B68F /* constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
-		B2FE648912ED8E0C00D1B68F /* constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constant.m; sourceTree = "<group>"; };
-		B2FE648C12ED8E0C00D1B68F /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
-		B2FE648D12ED8E0C00D1B68F /* event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = event.m; sourceTree = "<group>"; };
-		B2FE649012ED8E0C00D1B68F /* objectrenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectrenderer.h; sourceTree = "<group>"; };
-		B2FE649112ED8E0C00D1B68F /* objectrenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objectrenderer.m; sourceTree = "<group>"; };
-		B2FE649212ED8E0C00D1B68F /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
-		B2FE649312ED8E0C00D1B68F /* parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parser.m; sourceTree = "<group>"; };
-		B2FE649412ED8E0C00D1B68F /* reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reference.h; sourceTree = "<group>"; };
-		B2FE649512ED8E0C00D1B68F /* reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reference.m; sourceTree = "<group>"; };
-		B2FE649612ED8E0C00D1B68F /* referencerenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referencerenderer.h; sourceTree = "<group>"; };
-		B2FE649712ED8E0C00D1B68F /* referencerenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = referencerenderer.m; sourceTree = "<group>"; };
-		B2FE649812ED8E0C00D1B68F /* sendthreadsafe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sendthreadsafe.c; sourceTree = "<group>"; };
-		B2FE649912ED8E0C00D1B68F /* sendthreadsafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendthreadsafe.h; sourceTree = "<group>"; };
-		B2FE649A12ED8E0C00D1B68F /* specifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = specifier.h; sourceTree = "<group>"; };
-		B2FE649B12ED8E0C00D1B68F /* specifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = specifier.m; sourceTree = "<group>"; };
-		B2FE649C12ED8E0C00D1B68F /* terminology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = terminology.h; sourceTree = "<group>"; };
-		B2FE649D12ED8E0C00D1B68F /* terminology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = terminology.m; sourceTree = "<group>"; };
-		B2FE649E12ED8E0D00D1B68F /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		B2FE649F12ED8E0D00D1B68F /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
-		B2FE64A012ED8E0D00D1B68F /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
-		B2FE64A112ED8E0D00D1B68F /* types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = types.m; sourceTree = "<group>"; };
-		B2FE64A212ED8E0D00D1B68F /* unittype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unittype.h; sourceTree = "<group>"; };
-		B2FE64A312ED8E0D00D1B68F /* unittype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unittype.m; sourceTree = "<group>"; };
-		B2FE64A412ED8E0D00D1B68F /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
-		B2FE64A512ED8E0D00D1B68F /* utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utils.m; sourceTree = "<group>"; };
 		B2FE64F312ED8F3500D1B68F /* FinderTrashPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTrashPatch.h; sourceTree = "<group>"; };
 		B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderTrashPatch.m; sourceTree = "<group>"; };
 		B2FE66ED12EEF49700D1B68F /* FinderTerminalPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderTerminalPatch.h; sourceTree = "<group>"; };
@@ -167,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				B20A18D912F9A21C0050FD80 /* Appscript.framework in Frameworks */,
+				B20A18FC12F9A5610050FD80 /* Appscript.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +169,7 @@
 			children = (
 				089C1672FE841209C02AAC07 /* Foundation.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				B20A18FB12F9A5610050FD80 /* Appscript.framework */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -231,7 +211,7 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B2FE645D12ED8E0C00D1B68F /* Appscript */,
+				B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */,
 				B2FE615712ED86C800D1B68F /* FNGlue */,
 				B2FE6B5112EF9E3C00D1B68F /* TRGlue */,
 				B2FE5FF112ED78E500D1B68F /* NSArray+Additions */,
@@ -240,6 +220,15 @@
 				32DBCF630370AF2F00C91783 /* FinderPatch_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B20A18CC12F9A2000050FD80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B20A18D412F9A2000050FD80 /* Appscript.framework */,
+				B20A18D612F9A2000050FD80 /* objc-appscript-test.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B2FE5FF112ED78E500D1B68F /* NSArray+Additions */ = {
@@ -268,53 +257,6 @@
 				B2FE616312ED86C800D1B68F /* FNReferenceRendererGlue.m */,
 			);
 			path = FNGlue;
-			sourceTree = "<group>";
-		};
-		B2FE645D12ED8E0C00D1B68F /* Appscript */ = {
-			isa = PBXGroup;
-			children = (
-				B2FE646012ED8E0C00D1B68F /* appdata.h */,
-				B2FE646112ED8E0C00D1B68F /* appdata.m */,
-				B2FE646212ED8E0C00D1B68F /* application.h */,
-				B2FE646312ED8E0C00D1B68F /* application.m */,
-				B2FE646412ED8E0C00D1B68F /* Appscript.h */,
-				B2FE646812ED8E0C00D1B68F /* Appscript_Prefix.pch */,
-				B2FE646912ED8E0C00D1B68F /* base.h */,
-				B2FE646A12ED8E0C00D1B68F /* base.m */,
-				B2FE646B12ED8E0C00D1B68F /* bridgedata.h */,
-				B2FE646C12ED8E0C00D1B68F /* bridgedata.m */,
-				B2FE648412ED8E0C00D1B68F /* codecs.h */,
-				B2FE648512ED8E0C00D1B68F /* codecs.m */,
-				B2FE648612ED8E0C00D1B68F /* command.h */,
-				B2FE648712ED8E0C00D1B68F /* command.m */,
-				B2FE648812ED8E0C00D1B68F /* constant.h */,
-				B2FE648912ED8E0C00D1B68F /* constant.m */,
-				B2FE648C12ED8E0C00D1B68F /* event.h */,
-				B2FE648D12ED8E0C00D1B68F /* event.m */,
-				B2FE649012ED8E0C00D1B68F /* objectrenderer.h */,
-				B2FE649112ED8E0C00D1B68F /* objectrenderer.m */,
-				B2FE649212ED8E0C00D1B68F /* parser.h */,
-				B2FE649312ED8E0C00D1B68F /* parser.m */,
-				B2FE649412ED8E0C00D1B68F /* reference.h */,
-				B2FE649512ED8E0C00D1B68F /* reference.m */,
-				B2FE649612ED8E0C00D1B68F /* referencerenderer.h */,
-				B2FE649712ED8E0C00D1B68F /* referencerenderer.m */,
-				B2FE649812ED8E0C00D1B68F /* sendthreadsafe.c */,
-				B2FE649912ED8E0C00D1B68F /* sendthreadsafe.h */,
-				B2FE649A12ED8E0C00D1B68F /* specifier.h */,
-				B2FE649B12ED8E0C00D1B68F /* specifier.m */,
-				B2FE649C12ED8E0C00D1B68F /* terminology.h */,
-				B2FE649D12ED8E0C00D1B68F /* terminology.m */,
-				B2FE649E12ED8E0D00D1B68F /* test.h */,
-				B2FE649F12ED8E0D00D1B68F /* test.m */,
-				B2FE64A012ED8E0D00D1B68F /* types.h */,
-				B2FE64A112ED8E0D00D1B68F /* types.m */,
-				B2FE64A212ED8E0D00D1B68F /* unittype.h */,
-				B2FE64A312ED8E0D00D1B68F /* unittype.m */,
-				B2FE64A412ED8E0D00D1B68F /* utils.h */,
-				B2FE64A512ED8E0D00D1B68F /* utils.m */,
-			);
-			path = Appscript;
 			sourceTree = "<group>";
 		};
 		B2FE6A9712EF696300D1B68F /* NSMenu+itemWithKeyEquivalent */ = {
@@ -380,6 +322,7 @@
 				B2FE6D2312F0B82F00D1B68F /* Copy Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
+				B20A18E012F9A2530050FD80 /* CopyFiles */,
 				B2FE6C6E12F048B500D1B68F /* Unpack gems */,
 				B2FE6CAC12F07C9300D1B68F /* Set icon */,
 				B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */,
@@ -389,6 +332,7 @@
 			);
 			dependencies = (
 				B20A167112F875860050FD80 /* PBXTargetDependency */,
+				B20A18F012F9A4250050FD80 /* PBXTargetDependency */,
 			);
 			name = FinderPatch;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -406,6 +350,12 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* FinderPatch */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B20A18CC12F9A2000050FD80 /* Products */;
+					ProjectRef = B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* FinderPatch */,
@@ -413,6 +363,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B20A18D412F9A2000050FD80 /* Appscript.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Appscript.framework;
+			remoteRef = B20A18D312F9A2000050FD80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B20A18D612F9A2000050FD80 /* objc-appscript-test.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "objc-appscript-test.octest";
+			remoteRef = B20A18D512F9A2000050FD80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		B2FE5FBB12ED778700D1B68F /* Restart Finder */ = {
@@ -486,25 +453,6 @@
 				B2FE616612ED86C800D1B68F /* FNConstantGlue.m in Sources */,
 				B2FE616712ED86C800D1B68F /* FNReferenceGlue.m in Sources */,
 				B2FE616812ED86C800D1B68F /* FNReferenceRendererGlue.m in Sources */,
-				B2FE64A712ED8E0D00D1B68F /* appdata.m in Sources */,
-				B2FE64A812ED8E0D00D1B68F /* application.m in Sources */,
-				B2FE64A912ED8E0D00D1B68F /* base.m in Sources */,
-				B2FE64AA12ED8E0D00D1B68F /* bridgedata.m in Sources */,
-				B2FE64BB12ED8E0D00D1B68F /* codecs.m in Sources */,
-				B2FE64BC12ED8E0D00D1B68F /* command.m in Sources */,
-				B2FE64BD12ED8E0D00D1B68F /* constant.m in Sources */,
-				B2FE64BF12ED8E0D00D1B68F /* event.m in Sources */,
-				B2FE64C212ED8E0D00D1B68F /* objectrenderer.m in Sources */,
-				B2FE64C312ED8E0D00D1B68F /* parser.m in Sources */,
-				B2FE64C412ED8E0D00D1B68F /* reference.m in Sources */,
-				B2FE64C512ED8E0D00D1B68F /* referencerenderer.m in Sources */,
-				B2FE64C612ED8E0D00D1B68F /* sendthreadsafe.c in Sources */,
-				B2FE64C712ED8E0D00D1B68F /* specifier.m in Sources */,
-				B2FE64C812ED8E0D00D1B68F /* terminology.m in Sources */,
-				B2FE64C912ED8E0D00D1B68F /* test.m in Sources */,
-				B2FE64CA12ED8E0D00D1B68F /* types.m in Sources */,
-				B2FE64CB12ED8E0D00D1B68F /* unittype.m in Sources */,
-				B2FE64CC12ED8E0D00D1B68F /* utils.m in Sources */,
 				B2FE64F512ED8F3500D1B68F /* FinderTrashPatch.m in Sources */,
 				B2FE66EF12EEF49700D1B68F /* FinderTerminalPatch.m in Sources */,
 				B2FE6A9A12EF696300D1B68F /* NSMenu+itemWithKeyEquivalent.m in Sources */,
@@ -526,6 +474,11 @@
 			target = B20A166D12F8756D0050FD80 /* Increment build version */;
 			targetProxy = B20A167012F875860050FD80 /* PBXContainerItemProxy */;
 		};
+		B20A18F012F9A4250050FD80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Appscript;
+			targetProxy = B20A18EF12F9A4250050FD80 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -534,6 +487,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Appscript/build/Release_10.5_32_64_GC_embed\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -552,6 +509,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Appscript/build/Release_10.5_32_64_GC_embed\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FinderPatch_Prefix.pch;

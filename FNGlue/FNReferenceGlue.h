@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "Appscript.h"
+#import "Appscript/Appscript.h"
 #import "FNCommandGlue.h"
 #import "FNReferenceRendererGlue.h"
 #define FNApp ((FNReference *)[FNReference referenceWithAppData: nil aemReference: AEMApp])

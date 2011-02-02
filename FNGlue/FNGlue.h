@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "Appscript.h"
+#import "Appscript/Appscript.h"
 #import "FNApplicationGlue.h"
 #import "FNCommandGlue.h"
 #import "FNConstantGlue.h"

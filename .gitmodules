@@ -1,0 +1,3 @@
+[submodule "Appscript"]
+	path = Appscript
+	url = git://github.com/toy/Appscript.git
