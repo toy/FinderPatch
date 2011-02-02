@@ -11,6 +11,7 @@
 		B20A18D912F9A21C0050FD80 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A18D412F9A2000050FD80 /* Appscript.framework */; };
 		B20A18DE12F9A23C0050FD80 /* Appscript.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B20A18D412F9A2000050FD80 /* Appscript.framework */; };
 		B20A18FC12F9A5610050FD80 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20A18FB12F9A5610050FD80 /* Appscript.framework */; };
+		B20A1A7D12F9D1730050FD80 /* FinderOpenWithAppPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B20A1A7C12F9D1730050FD80 /* FinderOpenWithAppPatch.m */; };
 		B2FE5FD212ED784400D1B68F /* FinderPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FD112ED784400D1B68F /* FinderPatch.m */; };
 		B2FE5FF412ED78E500D1B68F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */; };
 		B2FE601E12ED7A0D00D1B68F /* FinderLabelPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */; };
@@ -95,6 +96,8 @@
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B20A18CB12F9A2000050FD80 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = Appscript/Appscript.xcodeproj; sourceTree = "<group>"; };
 		B20A18FB12F9A5610050FD80 /* Appscript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Appscript.framework; path = Appscript/build/Release_10.5_32_64_GC_embed/Appscript.framework; sourceTree = "<group>"; };
+		B20A1A7B12F9D1730050FD80 /* FinderOpenWithAppPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderOpenWithAppPatch.h; sourceTree = "<group>"; };
+		B20A1A7C12F9D1730050FD80 /* FinderOpenWithAppPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderOpenWithAppPatch.m; sourceTree = "<group>"; };
 		B2FE5FD012ED784400D1B68F /* FinderPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch.h; sourceTree = "<group>"; };
 		B2FE5FD112ED784400D1B68F /* FinderPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderPatch.m; sourceTree = "<group>"; };
 		B2FE5FF212ED78E500D1B68F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				B2FE66EE12EEF49700D1B68F /* FinderTerminalPatch.m */,
 				B2FE6C2112F0390B00D1B68F /* FinderTextMatePatch.h */,
 				B2FE6C2212F0390B00D1B68F /* FinderTextMatePatch.m */,
+				B20A1A7B12F9D1730050FD80 /* FinderOpenWithAppPatch.h */,
+				B20A1A7C12F9D1730050FD80 /* FinderOpenWithAppPatch.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				B2FE6B6212EF9E3C00D1B68F /* TRReferenceRendererGlue.m in Sources */,
 				B2FE6C2312F0390B00D1B68F /* FinderTextMatePatch.m in Sources */,
 				B2FE6D6A12F0FB7200D1B68F /* NSTask+Simple.m in Sources */,
+				B20A1A7D12F9D1730050FD80 /* FinderOpenWithAppPatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

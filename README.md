@@ -6,6 +6,7 @@ Simbl plugin for Finder.
 - Shortcuts for labels
 - Open Terminal window here
 - Open selected files in TextMate passing dirs through [mate ruby gem](https://github.com/toy/mate) (will load only if TextMate can be found)
+- Open selected files with AppZapper or Disk Inventory X if they are present
 
 Puts patches on Finder icon
 
