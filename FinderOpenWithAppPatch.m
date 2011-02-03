@@ -66,7 +66,7 @@
 
 	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
-	NSArray *urls = [[[finder selection] getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
+	NSArray *urls = [self refUrls:[finder selection]];
 
 	[[NSWorkspace sharedWorkspace] openURLs:urls withAppBundleIdentifier:[sender representedObject] options:NSWorkspaceLaunchDefault additionalEventParamDescriptor:nil launchIdentifiers:NULL];
 

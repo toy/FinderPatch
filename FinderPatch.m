@@ -70,5 +70,13 @@
 
 }
 
++ (NSArray *) refUrls:(FNReference *)ref {
+	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
+}
+
++ (NSArray *) refPaths:(FNReference *)ref {
+	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(path)];
+}
+
 @end
 

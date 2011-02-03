@@ -43,7 +43,7 @@
 
 	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
-	NSArray *paths = [[[finder selection] getListOfType:typeFSRef] mapUsingSelector:@selector(path)];
+	NSArray *paths = [self refPaths:[finder selection]];
 
 	if ([paths count] > 0) {
 		NSMutableArray *arguments = [NSMutableArray arrayWithObjects:@"ruby", @"-e", @"load 'mate/../../bin/tm'", nil];

@@ -23,5 +23,7 @@
 + (void) insertSeparatorInPatchMenuIfNotEmpty;
 + (NSDictionary *) environment;
 + (void) shiftItemWithKeyEquivalent:(NSString *)keyEquivalent andModifierMask:(NSUInteger)modifierMask;
++ (NSArray *) refUrls:(FNReference *)ref;
++ (NSArray *) refPaths:(FNReference *)ref;
 
 @end

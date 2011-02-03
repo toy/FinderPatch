@@ -72,10 +72,6 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	return [[[NSClassFromString(@"TGlobalWindowController") globalWindowController] frontmostBrowserWindowControllerIncludingDesktop] browserViewController];
 }
 
-+ (NSArray *) getUrls:(FNReference *)ref {
-	return [[ref getListOfType:typeFSRef] mapUsingSelector:@selector(url)];
-}
-
 + (void) selectNextAfterBlock:(void (^)())block viewController:(NSViewController *)viewController {
 	FNApplication *finder = [FNApplication applicationWithName:@"Finder"];
 
@@ -111,12 +107,12 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 	}
 	NSString *resourceValueKey = [sortByToResourceValueKeys objectForKey:sortBy];
 
-	NSArray *selectedUrls = [self getUrls:[finder selection]];
+	NSArray *selectedUrls = [self refUrls:[finder selection]];
 	NSArray *containers = [[selectedUrls mapUsingSelector:@selector(URLByDeletingLastPathComponent)] uniq];
 	NSMutableArray *candidateUrls = [NSMutableArray arrayWithCapacity:[selectedUrls count]];
 	for (NSURL *container in containers) {
 		FNReference *siblingItems = [[[finder items] byIndex:container] items];
-		NSArray *siblingUrls = [self getUrls:siblingItems];
+		NSArray *siblingUrls = [self refUrls:siblingItems];
 
 		switch (sortType) {
 			case FPSortTypeColumn:
@@ -194,7 +190,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 		for (wait = 100; wait > 0; wait--) {
 			usleep(100000);
 
-			if (nil == [selectedUrls firstObjectCommonWithArray:[self getUrls:[finder selection]]]) {
+			if (nil == [selectedUrls firstObjectCommonWithArray:[self refUrls:[finder selection]]]) {
 				break;
 			}
 		}
