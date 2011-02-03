@@ -399,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/osascript;
-			shellScript = "if (system attribute \"NO_RESTART\") is equal to \"\" then\n\ttell application \"Finder\" to quit\n\ttell application \"Console\" to activate\n\tdo shell script \"open -b com.apple.finder\"\nend if\n";
+			shellScript = "set appName to \"Finder\"\nif (system attribute \"NO_RESTART\") is equal to \"\" then\n\ttell application appName to quit\n\ttell application \"Console\" to activate\n\ttell application \"System Events\"\n\t\trepeat while (exists process appName)\n\t\t\tdelay 0.5\n\t\tend repeat\n\tend tell\n\ttell application appName to activate\nend if\n";
 		};
 		B2FE654812ED9AB300D1B68F /* Create link to Plugins dir */ = {
 			isa = PBXShellScriptBuildPhase;
