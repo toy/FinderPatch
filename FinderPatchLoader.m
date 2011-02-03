@@ -11,6 +11,7 @@
 #import "FinderPatch.h"
 #import "FinderLabelPatch.h"
 #import "FinderTrashPatch.h"
+#import "FinderLinkPatch.h"
 #import "FinderRenamePatch.h"
 #import "FinderRemoveEmptyDirsPatch.h"
 #import "FinderTerminalPatch.h"
@@ -26,6 +27,7 @@
 	[FinderLabelPatch loadPatch];
 	[FinderPatch insertSeparatorInPatchMenu];
 
+	[FinderLinkPatch loadPatch];
 	[FinderRenamePatch loadPatch];
 	[FinderRemoveEmptyDirsPatch loadPatch];
 	[FinderPatch insertSeparatorInPatchMenu];

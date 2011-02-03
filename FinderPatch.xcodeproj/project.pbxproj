@@ -15,6 +15,7 @@
 		B264891712FA96990075715C /* FinderRenamePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B264891612FA96990075715C /* FinderRenamePatch.m */; };
 		B2648B4612FB22CC0075715C /* FinderPatchLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B2648B4512FB22CC0075715C /* FinderPatchLoader.m */; };
 		B2648BC912FB318B0075715C /* FinderRemoveEmptyDirsPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2648BC812FB318B0075715C /* FinderRemoveEmptyDirsPatch.m */; };
+		B2648C3612FB4D210075715C /* FinderLinkPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2648C3512FB4D210075715C /* FinderLinkPatch.m */; };
 		B2FE5FD212ED784400D1B68F /* FinderPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FD112ED784400D1B68F /* FinderPatch.m */; };
 		B2FE5FF412ED78E500D1B68F /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE5FF312ED78E500D1B68F /* NSArray+Additions.m */; };
 		B2FE601E12ED7A0D00D1B68F /* FinderLabelPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */; };
@@ -107,6 +108,8 @@
 		B2648B4512FB22CC0075715C /* FinderPatchLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderPatchLoader.m; sourceTree = "<group>"; };
 		B2648BC712FB318B0075715C /* FinderRemoveEmptyDirsPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderRemoveEmptyDirsPatch.h; sourceTree = "<group>"; };
 		B2648BC812FB318B0075715C /* FinderRemoveEmptyDirsPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderRemoveEmptyDirsPatch.m; sourceTree = "<group>"; };
+		B2648C3412FB4D210075715C /* FinderLinkPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderLinkPatch.h; sourceTree = "<group>"; };
+		B2648C3512FB4D210075715C /* FinderLinkPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderLinkPatch.m; sourceTree = "<group>"; };
 		B2FE5FD012ED784400D1B68F /* FinderPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderPatch.h; sourceTree = "<group>"; };
 		B2FE5FD112ED784400D1B68F /* FinderPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderPatch.m; sourceTree = "<group>"; };
 		B2FE5FF212ED78E500D1B68F /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				B2FE601D12ED7A0D00D1B68F /* FinderLabelPatch.m */,
 				B2FE64F312ED8F3500D1B68F /* FinderTrashPatch.h */,
 				B2FE64F412ED8F3500D1B68F /* FinderTrashPatch.m */,
+				B2648C3412FB4D210075715C /* FinderLinkPatch.h */,
+				B2648C3512FB4D210075715C /* FinderLinkPatch.m */,
 				B264891512FA96990075715C /* FinderRenamePatch.h */,
 				B264891612FA96990075715C /* FinderRenamePatch.m */,
 				B2648BC712FB318B0075715C /* FinderRemoveEmptyDirsPatch.h */,
@@ -495,6 +500,7 @@
 				B20A1A7D12F9D1730050FD80 /* FinderOpenWithAppPatch.m in Sources */,
 				B2648B4612FB22CC0075715C /* FinderPatchLoader.m in Sources */,
 				B2648BC912FB318B0075715C /* FinderRemoveEmptyDirsPatch.m in Sources */,
+				B2648C3612FB4D210075715C /* FinderLinkPatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
