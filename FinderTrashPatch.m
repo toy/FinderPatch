@@ -122,7 +122,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 					siblingSizes = [[siblingItems physicalSize] getList];
 				}
 
-				NSArray *siblingAttributes = [siblingUrls mapUsingBlock:(id)^(NSURL *url, NSUInteger idx) {
+				NSArray *siblingAttributes = [siblingUrls mapUsingBlock:(NSIndexer)^(NSURL *url, NSUInteger idx) {
 					id attribute = nil;
 					NSMutableArray *attributes = [NSMutableArray arrayWithCapacity:1];
 
