@@ -11,11 +11,12 @@
 @implementation FinderTerminalPatch
 
 + (void) load {
+	[self insertSeparatorInPatchMenuIfNotEmpty];
+
 	NSString *keyEquivalent = @"t";
 	NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 
 	[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
-	[self insertSeparatorInPatchMenuIfNotEmpty];
 
 	NSMenuItem *terminalHereItem = [[self patchMenu] addItemWithTitle:@"Terminal Here" action:@selector(cmdTerminalHere:) keyEquivalent:keyEquivalent];
 	[terminalHereItem setKeyEquivalentModifierMask:modifierMask];

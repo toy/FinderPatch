@@ -15,11 +15,12 @@
 	NSString *textMatePath = [workspace absolutePathForAppBundleWithIdentifier:@"com.macromates.textmate"];
 
 	if (textMatePath) {
+		[self insertSeparatorInPatchMenuIfNotEmpty];
+
 		NSString *keyEquivalent = @"m";
 		NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 
 		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
-		[self insertSeparatorInPatchMenuIfNotEmpty];
 
 		NSMenuItem *openInTextMateItem = [[self patchMenu] addItemWithTitle:@"Open in TextMate" action:@selector(cmdOpenInTextMate:) keyEquivalent:keyEquivalent];
 		[openInTextMateItem setKeyEquivalentModifierMask:modifierMask];
@@ -28,9 +29,9 @@
 		NSImage *textMateIcon = [workspace iconForFile:textMatePath];
 		[textMateIcon setSize:NSMakeSize(16, 16)];
 		[openInTextMateItem setImage:textMateIcon];
-
-		LOG_PATCH_LOADED;
 	}
+
+	LOG_PATCH_LOADED;
 }
 
 + (void) cmdOpenInTextMate:(id)sender {

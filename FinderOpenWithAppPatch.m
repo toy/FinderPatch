@@ -25,8 +25,9 @@
 	NSString *appPath = [workspace absolutePathForAppBundleWithIdentifier:bundleIdentifier];
 
 	if (appPath) {
-		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 		[self insertSeparatorInPatchMenuIfNotEmpty];
+
+		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 
 		NSString *openWithAppItemTitle = [NSString stringWithFormat:@"Open with %@", [self appNameByPath:appPath]];
 		NSMenuItem *openWithAppItem = [[self patchMenu] addItemWithTitle:openWithAppItemTitle action:@selector(cmdOpenWithApp:) keyEquivalent:keyEquivalent];

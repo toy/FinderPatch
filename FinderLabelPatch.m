@@ -13,12 +13,17 @@
 + (void) load {
 	[self insertSeparatorInPatchMenuIfNotEmpty];
 
-	NSArray *keys = [@"n e g p b y r o" componentsSeparatedByString:@" "];
-	NSUInteger i, _i = [keys count];
+	NSArray *keyEquivalents = [@"n e g p b y r o" componentsSeparatedByString:@" "];
+	NSUInteger modifierMask = NSControlKeyMask | NSAlternateKeyMask;
+
+	NSUInteger i, _i = [keyEquivalents count];
 	for (i = 0; i < _i; i++) {
-		NSString *key = [keys objectAtIndex:i];
-		NSMenuItem *setLabelItem = [[self patchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:key];
-		[setLabelItem setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask];
+		NSString *keyEquivalent = [keyEquivalents objectAtIndex:i];
+
+		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
+
+		NSMenuItem *setLabelItem = [[self patchMenu] addItemWithTitle:@"" action:@selector(cmdSetLabel:) keyEquivalent:keyEquivalent];
+		[setLabelItem setKeyEquivalentModifierMask:modifierMask];
 		[setLabelItem setTarget:self];
 		[setLabelItem setTag:i];
 	}
