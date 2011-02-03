@@ -30,8 +30,6 @@
 		[textMateIcon setSize:NSMakeSize(16, 16)];
 		[openInTextMateItem setImage:textMateIcon];
 	}
-
-	LOG_PATCH_LOADED;
 }
 
 + (void) cmdOpenInTextMate:(id)sender {

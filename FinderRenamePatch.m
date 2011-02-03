@@ -35,8 +35,6 @@
 		[renameSelectedRecursiveItem setTarget:self];
 		[renameSelectedRecursiveItem setAlternate:YES];
 	}
-
-	LOG_PATCH_LOADED;
 }
 
 + (void) cmdRenameSelected:(id)sender {

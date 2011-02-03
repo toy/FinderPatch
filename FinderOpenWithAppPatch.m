@@ -13,7 +13,6 @@
 + (void) load {
 	[self openWithAppBundleWithIdentifier:@"com.appzapper.AppZapper" forKeyEquivalent:@"\b"];
 	[self openWithAppBundleWithIdentifier:@"com.derlien.DiskInventoryX" forKeyEquivalent:@"d"];
-	LOG_PATCH_LOADED;
 }
 
 + (void) openWithAppBundleWithIdentifier:(NSString *)bundleIdentifier forKeyEquivalent:(NSString *)keyEquivalent {

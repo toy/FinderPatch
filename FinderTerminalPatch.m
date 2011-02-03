@@ -26,8 +26,6 @@
 	NSImage *terminalIcon = [workspace iconForFile:[workspace absolutePathForAppBundleWithIdentifier:@"com.apple.Terminal"]];
 	[terminalIcon setSize:NSMakeSize(16, 16)];
 	[terminalHereItem setImage:terminalIcon];
-
-	LOG_PATCH_LOADED;
 }
 
 + (void) cmdTerminalHere:(id)sender {

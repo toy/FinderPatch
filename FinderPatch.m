@@ -16,8 +16,6 @@
 		NSImage *finderPatchIcon = [[NSImage alloc] initByReferencingFile:finderPatchIconPath];
 		[NSApp setApplicationIconImage:finderPatchIcon];
 		[finderPatchIcon release];
-
-		LOG_PATCH_LOADED;
 	}
 }
 

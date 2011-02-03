@@ -32,7 +32,6 @@
 																														 name:NSWorkspaceDidChangeFileLabelsNotification
 																													 object:nil];
 	[self updateLabels:nil];
-	LOG_PATCH_LOADED;
 }
 
 + (void) updateLabels:(NSNotification *)notification {

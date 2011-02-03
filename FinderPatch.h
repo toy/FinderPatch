@@ -13,8 +13,6 @@
 #import "NSMenu+itemWithKeyEquivalent.h"
 #import "NSTask+Simple.h"
 
-#define LOG_PATCH_LOADED NSLog(@"%@ loaded", [self class])
-
 @interface FinderPatch : NSObject
 
 + (NSMenu *) fileMenu;
