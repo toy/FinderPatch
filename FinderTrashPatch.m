@@ -39,7 +39,7 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 
 @implementation FinderTrashPatch
 
-+ (void) load {
++ (void) loadPatch {
 	[[[self fileMenu] itemWithTitle:@"Move to Trash"] setTarget:self];
 }
 

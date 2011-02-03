@@ -10,7 +10,7 @@
 
 @implementation FinderOpenWithAppPatch
 
-+ (void) load {
++ (void) loadPatch {
 	[self openWithAppBundleWithIdentifier:@"com.appzapper.AppZapper" forKeyEquivalent:@"\b"];
 	[self openWithAppBundleWithIdentifier:@"com.derlien.DiskInventoryX" forKeyEquivalent:@"d"];
 }
@@ -24,8 +24,6 @@
 	NSString *appPath = [workspace absolutePathForAppBundleWithIdentifier:bundleIdentifier];
 
 	if (appPath) {
-		[self insertSeparatorInPatchMenuIfNotEmpty];
-
 		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 
 		NSString *openWithAppItemTitle = [NSString stringWithFormat:@"Open with %@", [self appNameByPath:appPath]];

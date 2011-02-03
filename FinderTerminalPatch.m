@@ -10,9 +10,7 @@
 
 @implementation FinderTerminalPatch
 
-+ (void) load {
-	[self insertSeparatorInPatchMenuIfNotEmpty];
-
++ (void) loadPatch {
 	NSString *keyEquivalent = @"t";
 	NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 

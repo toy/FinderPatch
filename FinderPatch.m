@@ -10,7 +10,7 @@
 
 @implementation FinderPatch
 
-+ (void) load {
++ (void) loadPatch {
 	if ([self class] == [FinderPatch class]) {
 		NSString *finderPatchIconPath = [[self thisBundle] pathForImageResource:@"FinderPatch"];
 		NSImage *finderPatchIcon = [[NSImage alloc] initByReferencingFile:finderPatchIconPath];
@@ -39,7 +39,7 @@
 	return [NSBundle bundleForClass:[self class]];
 }
 
-+ (void) insertSeparatorInPatchMenuIfNotEmpty {
++ (void) insertSeparatorInPatchMenu {
 	if ([[self patchMenu] numberOfItems] > 0) {
 		[[self patchMenu] addItem:[NSMenuItem separatorItem]];
 	}

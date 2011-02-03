@@ -10,13 +10,11 @@
 
 @implementation FinderTextMatePatch
 
-+ (void) load {
++ (void) loadPatch {
 	NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 	NSString *textMatePath = [workspace absolutePathForAppBundleWithIdentifier:@"com.macromates.textmate"];
 
 	if (textMatePath) {
-		[self insertSeparatorInPatchMenuIfNotEmpty];
-
 		NSString *keyEquivalent = @"m";
 		NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
 

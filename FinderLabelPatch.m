@@ -10,9 +10,7 @@
 
 @implementation FinderLabelPatch
 
-+ (void) load {
-	[self insertSeparatorInPatchMenuIfNotEmpty];
-
++ (void) loadPatch {
 	NSArray *keyEquivalents = [@"n e g p b y r o" componentsSeparatedByString:@" "];
 	NSUInteger modifierMask = NSControlKeyMask | NSAlternateKeyMask;
 

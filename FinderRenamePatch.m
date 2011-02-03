@@ -10,9 +10,7 @@
 
 @implementation FinderRenamePatch
 
-+ (void) load {
-	[self insertSeparatorInPatchMenuIfNotEmpty];
-
++ (void) loadPatch {
 	NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 	NSString *textMatePath = [workspace absolutePathForAppBundleWithIdentifier:@"com.macromates.textmate"];
 

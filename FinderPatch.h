@@ -15,10 +15,11 @@
 
 @interface FinderPatch : NSObject
 
++ (void) loadPatch;
 + (NSMenu *) fileMenu;
 + (NSMenu *) patchMenu;
 + (NSBundle *) thisBundle;
-+ (void) insertSeparatorInPatchMenuIfNotEmpty;
++ (void) insertSeparatorInPatchMenu;
 + (NSDictionary *) environment;
 + (void) shiftItemWithKeyEquivalent:(NSString *)keyEquivalent andModifierMask:(NSUInteger)modifierMask;
 + (NSArray *) refUrls:(FNReference *)ref;
