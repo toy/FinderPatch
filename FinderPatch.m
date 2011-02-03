@@ -65,7 +65,6 @@
 	if (keyEquivalentOwner) {
 		[keyEquivalentOwner setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
 	}
-
 }
 
 + (NSArray *) refUrls:(FNReference *)ref {

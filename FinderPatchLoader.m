@@ -12,6 +12,7 @@
 #import "FinderLabelPatch.h"
 #import "FinderTrashPatch.h"
 #import "FinderRenamePatch.h"
+#import "FinderRemoveEmptyDirsPatch.h"
 #import "FinderTerminalPatch.h"
 #import "FinderTextMatePatch.h"
 #import "FinderOpenWithAppPatch.h"
@@ -24,11 +25,15 @@
 
 	[FinderLabelPatch loadPatch];
 	[FinderPatch insertSeparatorInPatchMenu];
+
 	[FinderRenamePatch loadPatch];
+	[FinderRemoveEmptyDirsPatch loadPatch];
 	[FinderPatch insertSeparatorInPatchMenu];
+
 	[FinderTerminalPatch loadPatch];
 	[FinderTextMatePatch loadPatch];
 	[FinderPatch insertSeparatorInPatchMenu];
+
 	[FinderOpenWithAppPatch loadPatch];
 }
 

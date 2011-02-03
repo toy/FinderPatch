@@ -16,7 +16,7 @@
 
 	if (textMatePath) {
 		NSString *keyEquivalent = @"\r";
-		NSUInteger modifierMask = NSCommandKeyMask | NSControlKeyMask;
+		NSUInteger modifierMask = NSCommandKeyMask | NSAlternateKeyMask;
 
 		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 
