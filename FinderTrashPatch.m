@@ -197,15 +197,13 @@ NSComparator compareFinderAttributes = (NSComparator)^(id a, id b) {
 			if (viewController == [self frontmostBrowserViewController]) {
 				for (NSURL *candidateUrl in candidateUrls) {
 					if ([candidateUrl checkResourceIsReachableAndReturnError:nil]) {
-						NSURL *candidateParentUrl = [candidateUrl URLByDeletingLastPathComponent];
-
 						switch (sortType) {
 							case FPSortTypeColumn: {
 								[[finder select:candidateUrl] send];
 								break;
 							}
 							case FPSortTypeList: {
-								[[[[finder FinderWindows] first] target] setItem:candidateParentUrl];
+								[[[[finder FinderWindows] first] target] setItem:[candidateUrl URLByDeletingLastPathComponent]];
 								[[finder select:candidateUrl] send];
 								break;
 							}
