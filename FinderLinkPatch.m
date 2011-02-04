@@ -45,14 +45,25 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 
 	NSArray *selectedPaths = [self refPaths:[finder selection]];
+	NSMutableArray *linkPaths = [NSMutableArray arrayWithCapacity:[selectedPaths count]];
 
 	[selectedPaths enumerateObjectsUsingBlock:(id)^(NSString *path, NSUInteger idx, BOOL *stop) {
 		if ([fileManager fileExistsAtPath:path]) {
 			[self propeseLinkForPath:path withBlock:(NSProposeLinkPath)^(NSString *linkPath){
-				return [fileManager createSymbolicLinkAtPath:linkPath withDestinationPath:path error:nil];
+				BOOL created = [fileManager createSymbolicLinkAtPath:linkPath withDestinationPath:path error:nil];
+				if (created) {
+					[linkPaths addObject:[NSURL fileURLWithPath:linkPath]];
+				}
+				return created;
 			}];
 		}
 	}];
+	if ([linkPaths count] > 0) {
+		if ([selectedPaths count] == 1) { // Unselect, as selected may be directory and we will get new window
+			[[finder select:[NSArray array]] send];
+		}
+		[[finder select:linkPaths] send];
+	}
 
 	[pool release];
 }
@@ -64,6 +75,7 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 
 	NSArray *selectedPaths = [self refPaths:[finder selection]];
+	NSMutableArray *linkPaths = [NSMutableArray arrayWithCapacity:[selectedPaths count]];
 
 	[selectedPaths enumerateObjectsUsingBlock:(id)^(NSString *path, NSUInteger idx, BOOL *stop) {
 		BOOL isDir;
@@ -72,11 +84,18 @@
 				NSBeep();
 			} else {
 				[self propeseLinkForPath:path withBlock:(NSProposeLinkPath)^(NSString *linkPath){
-					return [fileManager linkItemAtPath:path toPath:linkPath error:nil];
+					BOOL created = [fileManager linkItemAtPath:path toPath:linkPath error:nil];
+					if (created) {
+						[linkPaths addObject:[NSURL fileURLWithPath:linkPath]];
+					}
+					return created;
 				}];
 			}
 		}
 	}];
+	if ([linkPaths count] > 0) {
+		[[finder select:linkPaths] send];
+	}
 
 	[pool release];
 }
