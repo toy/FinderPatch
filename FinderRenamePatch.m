@@ -20,7 +20,7 @@
 
 		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 
-		NSMenuItem *renameSelectedItem = [[self patchMenu] addItemWithTitle:@"Rename Selected…" action:@selector(cmdRenameSelected:) keyEquivalent:keyEquivalent];
+		NSMenuItem *renameSelectedItem = [[self patchMenu] addItemWithTitle:@"Rename with TextMate…" action:@selector(cmdRenameSelected:) keyEquivalent:keyEquivalent];
 		[renameSelectedItem setKeyEquivalentModifierMask:modifierMask];
 		[renameSelectedItem setTarget:self];
 
@@ -28,7 +28,7 @@
 
 		[self shiftItemWithKeyEquivalent:keyEquivalent andModifierMask:modifierMask];
 
-		NSMenuItem *renameSelectedRecursiveItem = [[self patchMenu] addItemWithTitle:@"Rename Selected Recursive…" action:@selector(cmdRenameSelectedRecursive:) keyEquivalent:keyEquivalent];
+		NSMenuItem *renameSelectedRecursiveItem = [[self patchMenu] addItemWithTitle:@"Rename Recursive with TextMate…" action:@selector(cmdRenameSelectedRecursive:) keyEquivalent:keyEquivalent];
 		[renameSelectedRecursiveItem setKeyEquivalentModifierMask:modifierMask];
 		[renameSelectedRecursiveItem setTarget:self];
 		[renameSelectedRecursiveItem setAlternate:YES];
